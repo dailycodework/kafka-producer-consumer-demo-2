@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 @Service
 @AllArgsConstructor
 public class StudentService {
-    private KafkaTemplate<String, Student> kafkaTemplate;
+    private KafkaTemplate<String, Object> kafkaTemplate;
 
     public void publish(Student student) {
         kafkaTemplate.send("students",

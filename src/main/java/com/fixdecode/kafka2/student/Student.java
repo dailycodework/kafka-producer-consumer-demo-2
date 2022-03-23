@@ -1,10 +1,13 @@
 package com.fixdecode.kafka2.student;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.UUID;
 
-@Data
+@Getter
+@Setter
 public class Student {
     private UUID id;
     private String name;
@@ -14,5 +17,8 @@ public class Student {
         this.id = UUID.randomUUID();
         this.name = name;
         this.department = department;
+    }
+
+    public Student() {
     }
 }
